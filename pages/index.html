@@ -7,23 +7,29 @@
     <title>Triple's profile site</title>
   </head>
   <body>
-    <!-- 4 обычных вертикальных экрана -->
-    <section class="v-section">1</section>
-    <section class="v-section">2</section>
-    <section class="v-section">3</section>
-    <section class="v-section">4</section>
-    <!-- Горизонтальный блок: высота = N экранов скролла, внутри sticky viewport -->
-    <div class="horizontal-wrapper">
+    <!-- Группа A: вертикальные 1–4 -->
+    <div class="bg-group bg-a">
+      <section class="v-section">1</section>
+      <section class="v-section">2</section>
+      <section class="v-section">3</section>
+      <section class="v-section">4</section>
+    </div>
+
+    <!-- Группа B: горизонтальные (обёртка уже была — добавили классы) -->
+    <div class="horizontal-wrapper bg-group bg-b">
       <div class="horizontal-track">
         <section>1</section>
         <section>2</section>
         <section>3</section>
-        <section>4</section>
       </div>
     </div>
-    <!-- Снова вертикальные экраны -->
-    <section class="v-section">5</section>
-    <section class="v-section">6</section>
+
+    <!-- Группа C: вертикальные 5–6 -->
+    <div class="bg-group bg-c">
+      <section class="v-section">5</section>
+      <section class="v-section">6</section>
+    </div>
+
+    <script src="../js/script.js"></script>
   </body>
-  <script src="../js/script.js"></script>
 </html>
