@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Triple's profile site</title>
   </head>
-  <body></body>
+  <body>
+    <!-- 4 обычных вертикальных экрана -->
+    <section class="v-section">1</section>
+    <section class="v-section">2</section>
+    <section class="v-section">3</section>
+    <section class="v-section">4</section>
+    <!-- Горизонтальный блок: высота = N экранов скролла, внутри sticky viewport -->
+    <div class="horizontal-wrapper">
+      <div class="horizontal-track">
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+        <section>4</section>
+      </div>
+    </div>
+    <!-- Снова вертикальные экраны -->
+    <section class="v-section">5</section>
+    <section class="v-section">6</section>
+  </body>
+  <script src="../js/script.js"></script>
 </html>

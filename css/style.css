@@ -1,0 +1,78 @@
+/* Сброс */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* clip, а НЕ hidden — hidden ломает position: sticky */
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  overflow-x: clip;
+}
+
+/* Вертикальные экраны — раньше не было высоты, отсюда «слипание» */
+.v-section {
+  height: 100vh;
+  height: 100dvh; /* на мобилках лучше d, чем vh */
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  outline: 2px solid #000; /* временно: видно границы */
+  outline-offset: -2px;
+}
+
+.v-section:nth-child(odd) {
+  background: #f4f4f4;
+}
+.v-section:nth-child(even) {
+  background: #e2e2e2;
+}
+
+/* Горизонтальный блок */
+.horizontal-wrapper {
+  height: 300vh; /* 3 экрана скролла для 3 панелей */
+  position: relative;
+}
+
+.horizontal-track {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  width: 300vw;
+  will-change: transform;
+}
+
+.horizontal-track > section {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  outline: 2px solid #000;
+  outline-offset: -2px;
+}
+
+.horizontal-track > section:nth-child(1) {
+  background: #fff3c4;
+}
+.horizontal-track > section:nth-child(2) {
+  background: #c9f0c9;
+}
+.horizontal-track > section:nth-child(3) {
+  background: #c9d7ff;
+}
